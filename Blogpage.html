@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Foody's Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  body{
+    background-color: whitesmoke;
+  }
+  /*typo*/
+  h1 nav{
+  font-family: 'Prompt', sans-serif;
+}
+  h2, h3, p{
+  font-family: 'Jost', sans-serif;
+}
+  /*Video*/
+  /* Style the video: 100% width and height to cover the entire window */
+  #myVideo {
+  position: fixed;
+
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Uneven column - style - 70% and 30% */
+  .leftcolumn {
+    float:  left;
+    width:  70%;
+    padding: 30px;
+}
+  .rightcolumn {
+    float:  left;
+    width: 30%;
+}
+/*style for read more button */
+  #more {display: none;}
+
+/*footer*/
+  footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #000000;
+  color: white;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+/*hover button*/
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Orange */
+.warning {
+  border-color: #ff9800;
+  color: orange;
+}
+
+.warning:hover {
+  background: #ff9800;
+  color: white;
+}
+
+.container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #ff9800;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style> 
+
+<script>
+
+  /* havascript codes for Read more button*/
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+</head>
+<body>
+  <!--nav bar code-->
+  <br>
+  <img src="1.png">
+  <h3 style="padding-left: 825px; font-family: Dancing Script">Personal blog about food</h3>
+  <br>
+  <hr>
+
+  <nav class="navbar navbar-expand-sm navbar-dark" >
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item" style="margin-left: 750px;">
+          <a class="nav-link" href="Portfolio.html" style="padding: 30px; color: #000000; padding-top: 30px;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About me.html" style="padding: 30px; color: #000000; padding-top: 30px; font-display: fallback;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Blogpage.html" style="padding: 30px; color: #F17325; padding-top: 30px;">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Project.html" style="padding: 30px; color: #000000; padding-top: 30px;">Project</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<br>
+<div class="row">
+  <div class="leftcolumn">
+    <img style="padding-left: 80px; " src="2.png">
+    <br>
+    <br>
+    <h1 style="padding-left: 80px">“How did we ever manage to cook before the arrival of the internet?” </h1>
+    <br>
+    <p style="padding-left: 80px;padding-right: 80px;">I suppose we had to rely on cookbooks, cooking tv shows, and knowledge handed down from our grandmothers. Of course, the more daring would experiment in the kitchen, remembering the successes, and mercifully forgetting any culinary disasters.<br><br>Nowadays we have a multitude of food blogs offering mouth-watering recipes, suggestions, and vivid photography, sending us straight to the kitchen … or the supermarket. There are hundreds of food blogs to tempt your taste buds. </p>
+    <br>
+    <p style="padding-left: 80px;padding-right: 80px;">Smitten Kitchen features delectable images of meals demanding to be eaten. Therefore should be no surprise that Smitten Kitchen has found great popularity with serious food fans.<br><br>Smitten Kitchen summarizes itself as being “Fearless cooking from a tiny kitchen in New York City.” It was created by Deb Perelman who obsessed with the intricacies of food and cooking. As she says on her About page, she loves being able to wake and cook whatever she feels like that day.<br><br>The recipes are the heart of this site. There is a particular emphasis on stepped-up comfort foods. The site also includes numerous tutorials on topics as diverse as how to poach an egg and how to make tart doughs that don’t shrink up on you.<br><br>Deb makes a point of only using commonly available ingredients.<br><br>The Recipes page splits all of the site’s recipes up by type, with additional subdivisions for Fruit, Meat, Sweets, and Vegetables.
+</p>
+<br>
+  </div>
+  <div class="rightcolumn" style="padding-top: 30px; padding-left: 20px; padding-right: 80px;">
+    <div class="card">
+      <video autoplay controls>
+    <source src="3.mp4">
+      </video>
+      <h1 style="padding-left: 10px; padding-top:20px">Budget Bytes</h1>
+      <p style="padding: 10px">Budget Bytes aims to provide delicious recipes designed for small budgets. It recognizes that we can’t all afford to use expensive ingredients and cook recipes that take hours to prepare.  <span id="dots">...</span><span id="more">It tries to cater to those with “Instagram taste and a peanut butter budget.”Budget Bytes is the creation of Beth Moncel. She wants to help people shop, cook, and eat smart. She provides numerous recipes on her blog, along with their cost analysis, preparation time, alternative preparations, and step-by-step photos of each recipe. Beth has developed six principles to keep her grocery budget low and reduce waste:<br><br>Beth has developed six principles to keep her grocery budget low and reduce waste:<br><br>1. Plan your meals<br>2. Use ingredients wisely<br>3. Portion control<br>4. Don't be afraid of leftovers<br>5. The freezer is your friend<br>6. Shop wisely</span></p>
+      <button onclick="myFunction()" id="myBtn" class="btn warning" style="padding: 10px;">Read more</button>
+    </div>
+    <br>
+    <br>
+    <div class="col">
+      <div class="container">
+       <img style="width: 475px; padding-right: 10px" class="image" src="5.png">
+      <div class="middle">
+    <div class="text">View more</div>
+  </div>
+</div>
+      <br>
+      <p>Smitten Kitchen features delectable images of meals demanding to be eaten. Therefore should be no surprise that Smitten Kitchen has found great popularity with serious food fans.  <span id="dots">...</span><span id="more">Smitten Kitchen summarizes itself as being “Fearless cooking from a tiny kitchen in New York City.” It was created by Deb Perelman who obsessed with the intricacies of food and cooking. As she says on her About page, she loves being able to wake and cook whatever she feels like that day.<br><br>The recipes are the heart of this site. There is a particular emphasis on stepped-up comfort foods. The site also includes numerous tutorials on topics as diverse as how to poach an egg and how to make tart doughs that don’t shrink up on you.<br><br>Deb makes a point of only using commonly available ingredients.<br>The Recipes page splits all of the site’s recipes up by type, with additional subdivisions for Fruit, Meat, Sweets, and Vegetables.</span></p>
+    </div> 
+    <div class="col">
+      <h1 style="padding-left: 10px; padding-top:20px">Instagram</h1>
+      <img src="4.png">
+    </div>
+  </div>
+
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #000000">
+    <br>
+    <br>
+    <!-- Grid container -->
+    <div class="container">
+      
+      <hr class="my-5" />
+
+      <!-- Section: Text -->
+      <section class="mb-5">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <p style="font-size: 400%;">
+              Launch Your Minimal & Creative Food Site With<br> Fazzy Foody
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Text -->
+
+      <!-- Section: Social -->
+      <section class="text-center mb-5">
+        <a href="https://www.facebook.com/mdt25th11/" class="fa fa-facebook" style="background-color:white; padding: 10px;"></a>
+        <a href="https://myaccount.google.com/personal-info?hl=vi" class="fa fa-google" style="background-color:white; padding: 10px;"></a>
+        <a href="https://www.instagram.com/mdt_25th11/" class="fa fa-instagram" style="background-color:white; padding: 10px;"></a>
+        <a href="https://www.linkedin.com/in/m%E1%BA%A1nh-%C4%91%E1%BB%A9c-305a7a1b5/" class="fa fa-linkedin" style="background-color:white; padding: 10px;"></a>
+      </section>
+      <!-- Section: Social -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2022 Copyright:
+      <a class="text-white" href="manhtd2511.github.io"
+         >manhtd2511.github.io</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+</div>
+</body>
+</body>
+</html>
